@@ -185,8 +185,8 @@
           <h2 class="text-2xl pt-8 font-bold">Select Your Seat</h2>
           <br />
           <hr class="border-dashed border-2 mt-6">
-          <div class="flex w-[700px] justify-between">
-            <div class="flex items-center">
+          <div class="flex w-[700px] justify-between mt-4">
+            <div class="flex items-center ">
               <img src="./images/seat-gray.png" alt="" />
               <h2>Available</h2>
             </div>
@@ -274,8 +274,8 @@
             <button class="btn set w-[90px]">J4</button>
           </div>
         </div>
-        <div>
-          <div class="border-l-2 border-dotted border-gray-500 h-5/6 items-center"></div>
+        <div class="grid">
+          <div class="border-l-2 border-dotted border-gray-200 h-full flex place-self-cente"></div>
         </div>
         <div>
           <div>
@@ -309,21 +309,24 @@
             </div>
             <div class="flex justify-between font-ital text-lg  font-medium  mt-6">
               <h1>Grand Total</h1>
-              <h1>BDT<span id="">0</span></h1>
+              <h1>BDT <span id="">0</span></h1>
             </div>
           </div>
           <!-- form part -->
           <div class="mt-4 space-y-4">
             <label for="" class="font-semibold text-base">Prasenger Name*</label><br />
-            <input type="text" placeholder="Enter your name" class="input input-bordered input-success w-full mt-4" required /> <br> <br>
+            <input type="text" placeholder="Enter your name" class="input input-bordered input-success w-full mt-4"
+              required /> <br> <br>
 
             <label for="" class="font-semibold text-base mt-6">Phone Number*</label><br />
-            <input type="text" placeholder="Enter your phone number" class="input input-bordered input-success w-full mt-4"  required/> <br> <br>
+            <input type="text" placeholder="Enter your phone number"
+              class="input input-bordered input-success w-full mt-4" required /> <br> <br>
 
             <label for="" class="font-semibold text-base mt-4">Email ID</label><br />
-            <input type="text" placeholder="Enter your email id" class="input input-bordered input-success w-full mt-4" />
-            
-            <button onclick="" class="btn text-white bg-[#1DD100] w-full ">
+            <input type="text" placeholder="Enter your email id"
+              class="input input-bordered input-success w-full mt-4" />
+
+            <button onclick="" class="btn text-white bg-[#1DD100] w-full">
               Next
             </button>
           </div>
@@ -335,16 +338,48 @@
         </div>
 
       </section>
-
     </section>
-
-
   </main>
 
+  <!-- footer part -->
 
-  <footer>
+  <footer class="footer bg-neutral text-neutral-content p-10">
+    <div class="container mx-auto flex justify-center items-center gap-[600px]  ">
+      <div>
+        <aside>
+          <h2 class="text-3xl font-extrabold text-white">P-Ticket</h2>
+          <br />
+          <p class="text-white">P-Ticket is a digital platform to make your daily commuting better.</p>
 
+        </aside>
+      </div>
+      <div>
+        <nav>
+          <h6 class="footer-title text-white">Download our app</h6>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+              <img src="images/Group 104.svg" alt="">
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
   </footer>
+<!-- another part in html -->
+<div id="sender" class="card w-96 bg-base-100 shadow-xl mx-auto mt-16 ">
+  <figure class="px-10 pt-10">
+      <img src="./images/success.png" class="rounded-xl" />
+  </figure>
+  <div class="card-body items-center text-center">
+      <h2 class="card-title font-bold text-3xl text-green-400">SUCCESS</h2>
+      <p class="font-bold">Thank you for Booking Our Bus Seats.
+          We are working hard to find the best service and deals for you. </p>
+      <p>Shortly you will find a confirmation in your email.</p>
+      <div class="card-actions">
+          <a href=""> <button id="" class="btn bg-green-500 pl-10 pr-10 rounded-3xl">Continue</button></a>
+      </div>
+  </div>
+</div>
 
   <script src="app.js"></script>
 </body>
