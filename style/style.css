@@ -10,3 +10,12 @@
 .font-raleway{
     font-family: "Raleway", sans-serif;
 }
+
+.fillbox{
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+}
+
+
+/* div.classList.add("flex justify-between pr-16  font-ital text-base gap-36 mt-4") */
