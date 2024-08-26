@@ -4,8 +4,35 @@ for (const btn of allBtn) {
     btn.addEventListener("click", function (event) {
         const setName = event.target.innerText;
         const perSeatPrice = getConvertedValue('sit-taka');
-        event.target.classList.add('bg-green-400');
+        // event.target.classList.add('bg-green-400');
         const selectedContainer = document.getElementById('newSide')
+        
+     
+        // event.target.setAttribute("disabled",false)
+        event.target.classList.toggle('bg-green-400');
+
+        // Toggle the disabled attribute
+        if (event.target.classList.contains('bg-green-400')) {
+            event.target.setAttribute("disabled", true);
+        } else {
+            event.target.removeAttribute("disabled");
+        }
+
+        const seatAccess = getConvertedValue('seat-count');
+        if (seatAccess + 1 > 4) {
+            alert("One person cannot buy more than 4 tickets.");
+            return;
+        }
+        
+
+
+        //    seat count update
+        const seatCount = getConvertedValue('seat-count');
+        document.getElementById('seat-count').innerText = seatCount + 1;
+
+        //  remaining seat
+        const remainingseat = getConvertedValue('remaining-seat');
+        document.getElementById('remaining-seat').innerText = remainingseat - 1;
 
         const div = document.createElement("div");
         div.classList.add("flex", "gap-36", "mt-2")
@@ -42,7 +69,11 @@ function updateGrandTotal(status) {
             const discounted = totalCost * 0.2;
             document.getElementById('grand-total').innerText = totalCost - discounted;
         }
-        else{
+        else if (couponCode == "NEW15") {
+            const discounted = totalCost * 0.15;
+            document.getElementById('grand-total').innerText = totalCost - discounted;
+        }
+        else {
             alert("Please Enter Valid Coupon Code");
         }
     }
