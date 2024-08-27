@@ -8,21 +8,18 @@ for (const btn of allBtn) {
         const selectedContainer = document.getElementById('newSide')
         
      
-        // event.target.setAttribute("disabled",false)
-        event.target.classList.toggle('bg-green-400');
-
-        // Toggle the disabled attribute
-        if (event.target.classList.contains('bg-green-400')) {
-            event.target.setAttribute("disabled", true);
-        } else {
-            event.target.removeAttribute("disabled");
-        }
+       
 
         const seatAccess = getConvertedValue('seat-count');
+        
+
         if (seatAccess + 1 > 4) {
             alert("One person cannot buy more than 4 tickets.");
             return;
         }
+        event.target.classList.add('bg-green-400');
+        event.target.setAttribute("disabled",false)
+        
         
 
 
@@ -57,6 +54,11 @@ for (const btn of allBtn) {
 }
 
 
+allBtn.addEventListener('click', () => {
+    allBtn.classList.add("");
+    calculateTotal();
+});
+
 function updateGrandTotal(status) {
     const totalCost = getConvertedValue("total-cost");
     if (status == undefined) {
@@ -80,7 +82,11 @@ function updateGrandTotal(status) {
 }
 
 
+function start() {
+    HideElementById('home');
+    showElementById('sender');
 
+}
 
 
 
